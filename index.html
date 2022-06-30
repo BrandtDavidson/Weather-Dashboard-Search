@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./Assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Top Header and jumbotron -->
+      <div class="jumbotron jumbotron-fluid bg-primary text-white text-center">
+        <div class="headerContainer">
+          <h2 class="display-6">Weather Dashboard</h2>
+          <p class="lead"></p>
+        </div>
+      </div>
+      <!-- Content Display-->
+      <div class="row">
+        <!-- Sidebar Search which is column 1 in row 1 -->
+        <div class="col-3 m-2 bg-light text-black">
+          <h2>Search for a City:</h2>
+          <div class="input-group mb-2">
+            <input type="text" class="form-control" id="cityInputField" />
+            <div class="input-group-append">
+              <button id="pinCity" class="btn bg-primary" type="button">
+                Search
+              </button>
+            </div>
+          </div>
+          <!-- Pinning Cities / Sticky Cities Card classes from Bootstrap (all below)-->
+        
+            <ul id="cityPinnedList" class="no-bullets">
+              <!-- <li class="list-group-item"</li>-->
+            </ul>
+        </div>
+        <!-- 1a. We want a column 2 row 1 for cityName as header-->
+        <!-- 1b. List currentDayWeather data for temp: data, wind: data, humidity: data, and UV Index: data&color -->
+        <!-- 2a. We want a header to display in column 3 row 2 that says 5-Day Forecast -->
+        <!-- 2b. We want to display 5 different cards with (top to bottom order) Date, Weather icon, temp: data, -->
+
+        <!-- Weather Cards in Main Display to the right of sidebar-->
+        <!-- 1a. Column 2 for row 1 for displaying -->
+        <div class="col-8 m-2 main_container" id="currentCityWeather">
+        
+            <!-- row 1 in col 2 -->
+            <div class="row-12">
+              <div class="card">
+                <div id="currentDayWeather" class="card-body">
+                  <h3 class="city">
+                    <span class="city_name"></span>
+                    (<span class="date"></span>)
+                    <span class="icon"></span>
+                  </h3>
+                  <div>Temp: <span class="temp"></span> &deg;F</div>
+                  <div>Wind: <span class="wind"></span> MPH</div>
+                  <div>Humidity: <span class="humidity"></span> %</div>
+                  <div>UV Index: <span class="uv"></span></div>
+                </div>
+              </div>
+            </div>
+            <!-- 2a. Row 2 in Col 2-->
+
+            <div class="row-12">
+              <h3>5-day Forecast:</h3>
+            </div>
+            <!-- 2b. This is the row 3 in col 2 with updated data from OpenWeatherAPI-->
+
+            <div id="boxesFiveDay" class="row">
+              <!-- Weather Day1 Card Box
+                <div id="box2" class="col-2 m-2 bg-primary"
+                -->
+            </div>
+
+            <div id="forecastPrototype" class="card-body bg-dark text-white">
+                <h4 class="city">
+                  (<span class="date"></span>)
+                </h4>
+                <span class="icon"></span>
+                <div>Temp: <span class="temp"></span> &deg;F</div>
+                <div>Wind: <span class="wind"></span> MPH</div>
+                <div>Humidity: <span class="humidity"></span> %</div>
+              </div>
+
+          </div>
+    
+      </div>
+    </div>
+
+    <!-- Moment().js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- JavaScript Bundle with Popper - Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Assets/js/script.js"></script>
+  </body>
+</html>

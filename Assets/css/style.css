@@ -1,0 +1,49 @@
+
+.btn {
+    background-color: rgba(35, 117, 211, 0.678);
+}
+
+.mainHeader {
+    background-color: rgba(35, 117, 211, 0.678);
+}
+
+.uv {
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.uv.low {
+    background-color: green;
+}
+
+.uv.moderate {
+    background-color: yellow;
+}
+
+.uv.high {
+    background-color: orange;
+}
+
+.uv.very_high {
+    background-color: red;
+}
+
+.uv.extreme {
+    background-color: purple;
+}
+
+ul.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+
+#forecastPrototype {
+    display: none;
+}
+
+#boxesFiveDay {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
