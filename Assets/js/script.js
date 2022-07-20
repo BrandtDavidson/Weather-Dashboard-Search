@@ -12,7 +12,7 @@ var stickyCities = $("#cityPinnedlist");
 var apiKey = "e79dd9d55d402ba24cf3a98e8d1934a3";
 var cities = [];
 var getGeoCodeUrl = (cityName) =>
-  `http://api.openweathermap.org/geo/1.0/direct?q=${cityName},,US&limit=5&appid=${apiKey}`;
+  `https://api.openweathermap.org/geo/1.0/direct?q=${cityName},,US&limit=5&appid=${apiKey}`;
 
 var getWeatherURL = (lat,lon) => 
     `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${apiKey}&units=imperial`;
